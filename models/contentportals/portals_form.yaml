@@ -1,0 +1,56 @@
+fields:
+    actor:
+        label: 'xitara.toolbox::lang.content.actor'
+        options:
+            sexxygirl: SeXXygirl
+            ladyanja: 'Lady Anja'
+        span: auto
+        type: dropdown
+    name:
+        label: 'xitara.toolbox::lang.content.name'
+        span: auto
+        type: text
+    shortcut:
+        label: 'xitara.toolbox::lang.content.shortcut'
+        span: full
+        type: text
+    ftp_server:
+        label: 'xitara.toolbox::lang.content.ftp_server'
+        span: auto
+        type: text
+    ftp_port:
+        label: 'xitara.toolbox::lang.content.ftp_port'
+        span: auto
+        type: number
+    ftp_user:
+        label: 'xitara.toolbox::lang.content.ftp_user'
+        span: auto
+        type: text
+    ftp_pass:
+        label: 'xitara.toolbox::lang.content.ftp_pass'
+        span: auto
+        type: text
+    folder_images:
+        label: 'xitara.toolbox::lang.content.folder_images'
+        span: auto
+        type: text
+    folder_videos:
+        label: 'xitara.toolbox::lang.content.folder_videos'
+        span: auto
+        type: text
+    folder_thumbs:
+        label: 'xitara.toolbox::lang.content.folder_thumbs'
+        span: auto
+        type: text
+    image_size:
+        label: 'xitara.toolbox::lang.content.image_size'
+        span: auto
+        type: text
+    image_fsk16:
+        label: 'xitara.toolbox::lang.content.image_fsk16'
+        span: auto
+        type: text
+    image_fsk18:
+        label: 'xitara.toolbox::lang.content.image_fsk18'
+        span: auto
+        type: text

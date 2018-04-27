@@ -1,0 +1,9 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nasid: NasID
+    cmsid: EroID
+    name: Name
+

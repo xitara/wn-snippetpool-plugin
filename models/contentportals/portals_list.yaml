@@ -1,0 +1,21 @@
+columns:
+    actor:
+        label: 'xitara.toolbox::lang.content.actor'
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: 'xitara.toolbox::lang.content.name'
+        type: text
+        searchable: true
+        sortable: true
+    shortcut:
+        label: 'xitara.toolbox::lang.content.shortcut'
+        type: text
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'xitara.toolbox::lang.content.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true

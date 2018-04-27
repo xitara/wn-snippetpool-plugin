@@ -1,0 +1,16 @@
+columns:
+    nasid:
+        label: 'xitara.toolbox::lang.content.nasid'
+        type: number
+        searchable: true
+        sortable: true
+    eroid:
+        label: 'xitara.toolbox::lang.content.eroid'
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: 'xitara.toolbox::lang.content.title'
+        type: text
+        searchable: true
+        sortable: true

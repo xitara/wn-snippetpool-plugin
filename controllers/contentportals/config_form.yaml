@@ -1,0 +1,10 @@
+name: ContentPortals
+modelClass: Xitara\Toolbox\Models\ContentPortals
+form: $/xitara/toolbox/models/contentportals/portals_form.yaml
+defaultRedirect: xitara/toolbox/contentportals
+create:
+    redirect: 'xitara/toolbox/contentportals/update/:id'
+    redirectClose: xitara/toolbox/contentportals
+update:
+    redirect: xitara/toolbox/contentportals
+    redirectClose: xitara/toolbox/contentportals
