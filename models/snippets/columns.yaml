@@ -1,0 +1,24 @@
+columns:
+    id:
+        label: 'xitara.snippetpool::lang.snippetpool.id'
+        type: number
+        searchable: true
+        sortable: true
+        cssClass: td-id
+    name:
+        label: 'xitara.snippetpool::lang.snippetpool.name'
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'xitara.snippetpool::lang.snippetpool.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        cssClass: td-date
+    updated_at:
+        label: 'xitara.snippetpool::lang.snippetpool.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        cssClass: td-date

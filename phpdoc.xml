@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>LA FetEnt Toolbox</title>
+    <parser>
+        <target>/home/mburghammer/htdocs/docs/lady-anja/toolbox3/plugins/xitara/snippetpool</target>
+        <encoding>utf8</encoding>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+            <item>@todo</item>
+        </markers>
+        <extensions>
+            <extension>php</extension>
+            <!-- <extension>php3</extension> -->
+            <!-- <extension>phtml</extension> -->
+        </extensions>
+        <visibility></visibility>
+    </parser>
+    <transformer>
+        <!-- <template name="responsive"/> -->
+        <target>/home/mburghammer/htdocs/docs/lady-anja/toolbox3/plugins/xitara/snippetpool</target>
+    </transformer>
+    <transformations>
+        <!-- <template name="responsive" /> -->
+    </transformations>
+    <files>
+        <!-- <file>test.php</file> -->
+        <!-- <directory>/home/mburghammer/htdocs/toolbox2/toolbox/</directory> -->
+        <directory>.</directory>
+        <!-- <ignore>includes/next_gen/vendor/*</ignore> -->
+        <!-- <ignore>includes/next_gen/getid3/*</ignore> -->
+        <!-- <ignore>includes/next_gen/cache/*</ignore> -->
+        <!-- <ignore></ignore> -->
+    </files>
+    <logging>
+        <level>warn</level>
+        <paths>
+            <default>/home/mburghammer/htdocs/docs/logs/{DATE}.log</default>
+            <errors>/home/mburghammer/htdocs/docs/logs/{DATE}.errors.log</errors>
+        </paths>
+    </logging>
+</phpdoc>

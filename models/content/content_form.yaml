@@ -1,8 +1,0 @@
-fields:
-    search:
-        label: 'xitara.toolbox::lang.toolbox.search'
-        nameFrom: name
-        descriptionFrom: description
-        list: $/toolbox/lists/list_content_search.yaml
-        span: auto
-        type: recordfinder

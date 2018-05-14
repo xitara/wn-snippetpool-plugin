@@ -1,0 +1,15 @@
+fields:
+    name:
+        label: 'xitara.snippetpool::lang.snippetpool.name'
+        span: full
+        type: text
+    snippet:
+        label: 'xitara.snippetpool::lang.snippetpool.snipped'
+        size: large
+        span: full
+        type: textarea
+    comment:
+        label: 'xitara.snippetpool::lang.snippetpool.comment'
+        span: full
+        size: ''
+        type: textarea

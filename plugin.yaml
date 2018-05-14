@@ -1,51 +1,13 @@
 plugin:
-    name: 'xitara.toolbox::lang.plugin.name'
-    description: 'xitara.toolbox::lang.plugin.description'
-    author: 'xitara.toolbox::lang.plugin.author'
-    icon: 'xitara.toolbox::lang.plugin.icon'
-    homepage: 'xitara.toolbox::lang.plugin.homepage'
+    name: 'xitara.snippetpool::lang.plugin.name'
+    description: 'xitara.snippetpool::lang.plugin.description'
+    author: 'xitara.snippetpool::lang.plugin.author'
+    icon: 'xitara.snippetpool::lang.plugin.icon'
+    homepage: 'xitara.snippetpool::lang.plugin.homepage'
 navigation:
-    toolbox:
-        label: 'xitara.toolbox::lang.toolbox.toolbox'
-        url: xitara/toolbox/content
+    snippetpool:
+        label: 'xitara.snippetpool::lang.snippetpool.snippetpool'
+        url: xitara/snippetpool/snippets
         icon: icon-life-ring
-        sideMenu:
-            dashboard:
-                label: 'xitara.toolbox::lang.toolbox.dashboard'
-                url: xitara/toolbox/dashboard
-                icon: icon-dashboard
-            portals:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.portals'
-                url: xitara/toolbox/contentportals
-                icon: icon-archive
-            bla:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.bla'
-                url: xitara/toolbox/content
-                icon: icon-archive
-            vla:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.vla'
-                url: xitara/toolbox/content
-                icon: icon-archive
-            sla:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.sla'
-                url: xitara/toolbox/content
-                icon: icon-archive
-            vlae:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.vlae'
-                url: xitara/toolbox/content
-                icon: icon-archive
-            bsg:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.bsg'
-                url: xitara/toolbox/content
-                icon: icon-archive
-            vsg:
-                group: 'xitara.toolbox::lang.toolbox.content'
-                label: 'xitara.toolbox::lang.content.vsg'
-                url: xitara/toolbox/content
-                icon: icon-archive
+        hidden: true
+

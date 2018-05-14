@@ -1,7 +1,7 @@
-title: ContentPortals
-modelClass: Xitara\Toolbox\Models\ContentPortals
-list: $/xitara/toolbox/models/contentportals/portals_list.yaml
-recordUrl: 'xitara/toolbox/contentportals/update/:id'
+title: Snippets
+modelClass: Xitara\SnippetPool\Models\Snippets
+list: $/xitara/snippetpool/models/snippets/columns.yaml
+recordUrl: 'xitara/snippetpool/snippets/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

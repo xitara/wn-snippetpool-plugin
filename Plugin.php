@@ -1,15 +1,18 @@
-<?php namespace Xitara\Toolbox;
+<?php namespace Xitara\SnippetPool;
 
+use App;
+use Backend;
 use BackendMenu;
 use System\Classes\PluginBase;
+use Xitara\Toolbox\Plugin as Toolbox;
 
 class Plugin extends PluginBase
 {
     public function pluginDetails()
     {
         return [
-            'name' => 'Toolbox 3.0',
-            'description' => 'Version 3 of the Lady Anja Toolbox with Integration in OctoberCMS',
+            'name' => 'Snippet Pool',
+            'description' => 'LA FetEnt Toolbox 3.0 - Snippet Pool',
             'author' => 'Xitara Websolution, Manuel Burghamer',
             'icon' => 'icon-dashcube',
             'homepage' => 'https://xitara.net',
@@ -19,31 +22,24 @@ class Plugin extends PluginBase
     public function register()
     {
         BackendMenu::registerContextSidenavPartial(
-            'Xitara.Toolbox',
-            'toolbox',
+            'Xitara.SnippetPool',
+            'snippetpool',
             '$/xitara/toolbox/partials/_sidebar.htm'
         );
     }
 
-    // public function registerComponents()
-    // {
-    // return [
-    //     '\Xitara\Toolbox\Components\Dashboard' => 'dashboard',
-    // ];
-    // }
+    public function boot()
+    {
+        /**
+         * Check if we are currently in backend module.
+         */
+        if (!App::runningInBackend()) {
+            return;
+        }
 
-    // public function registerPermissions()
-    // {
-    //     return [
-    //         'rainlab.users.access_users' => [
-    //             'tab'   => 'rainlab.user::lang.plugin.tab',
-    //             'label' => 'rainlab.user::lang.plugin.access_users'
-    //         ],
-    //     ];
-    // }
-
-    // public function registerNavigation()
-    // {
-
-    // }
+        /**
+         * add items to sidemenu
+         */
+        Toolbox::getSideMenu('Xitara.SnippetPool', 'snippetpool');
+    }
 }

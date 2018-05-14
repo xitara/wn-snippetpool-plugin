@@ -1,11 +1,11 @@
-<?php namespace Xitara\Toolbox\Models;
+<?php namespace Xitara\SnippetPool\Models;
 
 use Model;
 
 /**
  * Model
  */
-class Content extends Model
+class Snippets extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -22,5 +22,5 @@ class Content extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'xitara_toolbox_content';
+    public $table = 'xitara_snippetpool_snippets';
 }

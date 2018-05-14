@@ -1,17 +1,15 @@
-<?php namespace Xitara\Toolbox\Models;
+<?php namespace Xitara\SnippetPool\Models;
 
 use Model;
 
 /**
  * Model
  */
-class ContentPortals extends Model
+class Trashed extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
-    use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at'];
+    use \October\Rain\Database\Traits\SoftDelete;
 
     /**
      * @var array Validation rules
@@ -22,5 +20,5 @@ class ContentPortals extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'xitara_toolbox_content_portals';
+    public $table = 'xitara_snippetpool_snippets';
 }

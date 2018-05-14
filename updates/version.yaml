@@ -1,4 +1,3 @@
-3.0.0:
+1.0.0:
     - 'Initialize plugin.'
-    - create_xitara_toolbox_content.php
-    - create_xitara_toolbox_content_portals.php
+    - create_xitara_snippetpool_snippets.php
