@@ -8,6 +8,7 @@
             <item>TODO</item>
             <item>FIXME</item>
             <item>@todo</item>
+            <item>@see</item>
         </markers>
         <extensions>
             <extension>php</extension>
@@ -21,7 +22,15 @@
         <target>/home/mburghammer/htdocs/docs/lady-anja/toolbox3/plugins/xitara/snippetpool</target>
     </transformer>
     <transformations>
-        <!-- <template name="responsive" /> -->
+        <!-- <template name="abstract"/> -->
+        <template name="checkstyle"/>
+        <!-- <template name="clean"/> -->
+        <template name="new-black"/>
+        <!-- <template name="old-ocean"/> -->
+        <!-- <template name="responsive"/> -->
+        <!-- <template name="responsive-twig"/> -->
+        <!-- <template name="xml"/> -->
+        <!-- <template name="zend"/> -->
     </transformations>
     <files>
         <!-- <file>test.php</file> -->

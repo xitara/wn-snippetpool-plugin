@@ -1,9 +1,10 @@
 <?php namespace Xitara\SnippetPool\Updates;
 
+use Db;
 use October\Rain\Database\Updates\Migration;
 use Schema;
 
-class BuilderTableCreateXitaraSnippetPoolSnippets extends Migration
+class CreateXitaraSnippetPoolSnippets extends Migration
 {
     public function up()
     {
@@ -11,8 +12,9 @@ class BuilderTableCreateXitaraSnippetPoolSnippets extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name', 255);
-            $table->text('snippet');
-            $table->text('comment');
+            $table->text('snippet')->nullable();
+            $table->text('comment')->nullable();
+            $table->integer('group_id')->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
@@ -22,5 +24,12 @@ class BuilderTableCreateXitaraSnippetPoolSnippets extends Migration
     public function down()
     {
         Schema::dropIfExists('xitara_snippetpool_snippets');
+        Db::table('xitara_toolbox_config')
+            ->where('var', 'SideMenuItems[snippetpool]')
+            ->delete();
+
+        Db::table('xitara_toolbox_config')
+            ->where('module', 'Xitara.SnippetPool')
+            ->delete();
     }
 }

@@ -13,3 +13,9 @@ fields:
         span: full
         size: ''
         type: textarea
+    groups:
+        label: 'xitara.snippetpool::lang.snippetpool.groups'
+        nameFrom: name
+        descriptionFrom: description
+        span: full
+        type: relation

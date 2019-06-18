@@ -2,12 +2,4 @@ plugin:
     name: 'xitara.snippetpool::lang.plugin.name'
     description: 'xitara.snippetpool::lang.plugin.description'
     author: 'xitara.snippetpool::lang.plugin.author'
-    icon: 'xitara.snippetpool::lang.plugin.icon'
     homepage: 'xitara.snippetpool::lang.plugin.homepage'
-navigation:
-    snippetpool:
-        label: 'xitara.snippetpool::lang.snippetpool.snippetpool'
-        url: xitara/snippetpool/snippets
-        icon: icon-life-ring
-        hidden: true
-

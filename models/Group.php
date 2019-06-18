@@ -3,27 +3,16 @@
 use Model;
 
 /**
- * Model
+ * Group Model
  */
-class Snippets extends Model
+class Group extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
-
-    use \October\Rain\Database\Traits\SoftDelete;
-
-    protected $dates = ['deleted_at'];
-
-    public $requiredPermissions = ['xitara.snippetpool.snippets'];
-
-    /**
-     * @var array Validation rules
-     */
-    public $rules = [];
+    public $requiredPermissions = ['xitara.snippetpool.groups'];
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'xitara_snippetpool_snippets';
+    public $table = 'xitara_snippetpool_groups';
 
     /**
      * @var array Guarded fields
@@ -42,12 +31,9 @@ class Snippets extends Model
     public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [
-        'groups' => [
-            'Xitara\SnippetPool\Models\Group',
-            'table' => 'xitara_snippetpool_snippets_groups',
-            'key' => 'snippet_id',
-            'otherKey' => 'group_id',
-        ],
+        // 'groups' => [
+        // 'Xitara\SnippetPool\Models\Group',
+        // ],
     ];
     public $morphTo = [];
     public $morphOne = [];

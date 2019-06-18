@@ -1,3 +1,7 @@
 1.0.0:
     - 'Initialize plugin.'
     - create_xitara_snippetpool_snippets.php
+    - seed_xitara_toolbox_menu.php
+    - create_groups_table.php
+    - seed_groups_table.php
+    - create_xitara_snippetpool_snippets_groups.php
