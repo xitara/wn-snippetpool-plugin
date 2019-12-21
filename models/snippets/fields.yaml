@@ -5,17 +5,23 @@ fields:
         type: text
     snippet:
         label: 'xitara.snippetpool::lang.snippetpool.snipped'
-        size: large
-        span: full
+        size: giant
+        span: auto
         type: textarea
     comment:
         label: 'xitara.snippetpool::lang.snippetpool.comment'
-        span: full
-        size: ''
-        type: textarea
+        span: auto
+        size: giant
+        type: richeditor
     groups:
         label: 'xitara.snippetpool::lang.snippetpool.groups'
         nameFrom: name
         descriptionFrom: description
-        span: full
+        span: auto
         type: relation
+    images:
+        label: 'xitara.snippetpool::lang.snippetpool.images'
+        span: auto
+        type: fileupload
+        mode: image
+        attachOnUpload: true

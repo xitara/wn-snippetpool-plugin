@@ -1,6 +1,5 @@
 <?php namespace Xitara\SnippetPool\Updates;
 
-use Db;
 use October\Rain\Database\Updates\Migration;
 use Schema;
 
@@ -24,12 +23,5 @@ class CreateXitaraSnippetPoolSnippets extends Migration
     public function down()
     {
         Schema::dropIfExists('xitara_snippetpool_snippets');
-        Db::table('xitara_toolbox_config')
-            ->where('var', 'SideMenuItems[snippetpool]')
-            ->delete();
-
-        Db::table('xitara_toolbox_config')
-            ->where('module', 'Xitara.SnippetPool')
-            ->delete();
     }
 }

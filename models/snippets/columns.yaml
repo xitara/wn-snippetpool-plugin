@@ -4,21 +4,23 @@ columns:
         type: number
         searchable: true
         sortable: true
-        cssClass: td-id
+        width: 5%
+        align: center
     name:
         label: 'xitara.snippetpool::lang.snippetpool.name'
         type: text
         searchable: true
         sortable: true
+        width: 75%
     created_at:
         label: 'xitara.snippetpool::lang.snippetpool.created_at'
         type: datetime
         searchable: true
         sortable: true
-        cssClass: td-date
+        width: 10%
     updated_at:
         label: 'xitara.snippetpool::lang.snippetpool.updated_at'
         type: datetime
         searchable: true
         sortable: true
-        cssClass: td-date
+        width: 10%

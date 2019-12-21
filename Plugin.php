@@ -4,22 +4,22 @@ use App;
 use Backend;
 use BackendMenu;
 use System\Classes\PluginBase;
+use Xitara\Core\Plugin as Core;
 use Xitara\SnippetPool\Models\Group;
-use Xitara\Toolbox\Plugin as Toolbox;
 
 class Plugin extends PluginBase
 {
     /**
      * @var array Plugin dependencies
      */
-    public $require = ['Xitara.Toolbox'];
+    public $require = ['Xitara.Core'];
 
     public function register()
     {
         BackendMenu::registerContextSidenavPartial(
             'Xitara.SnippetPool',
             'snippetpool',
-            '$/xitara/toolbox/partials/_sidebar.htm'
+            '$/xitara/core/partials/_sidebar.htm'
         );
     }
 
@@ -35,7 +35,7 @@ class Plugin extends PluginBase
         /**
          * add items to sidemenu
          */
-        Toolbox::getSideMenu('Xitara.SnippetPool', 'snippetpool');
+        Core::getSideMenu('Xitara.SnippetPool', 'snippetpool');
     }
 
     /**
@@ -52,7 +52,6 @@ class Plugin extends PluginBase
                 'icon' => 'icon-life-ring',
                 'permissions' => ['xitara.snippetpool.*'],
                 'order' => 500,
-                'hidden' => true,
             ],
         ];
     }

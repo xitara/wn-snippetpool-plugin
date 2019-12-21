@@ -8,7 +8,7 @@
     ],
 
     'submenu' => [
-        'label' => 'Notizen / Infos',
+        'label' => 'Snippet-Pool',
     ],
 
     'snippetpool' => [
@@ -20,6 +20,7 @@
         'created_at' => 'angelegt',
         'updated_at' => 'letzte Änderung',
         'snippets' => 'Snippets',
+        'images' => 'Bilder',
         'trashed' => 'Papierkorb',
         'code' => 'Code',
         'description' => 'Beschreibung',
