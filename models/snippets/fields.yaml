@@ -1,8 +1,14 @@
 fields:
     name:
         label: 'xitara.snippetpool::lang.snippetpool.name'
-        span: full
+        span: auto
         type: text
+    tags:
+        label: 'xitara.snippetpool::lang.snippetpool.tags'
+        span: auto
+        type: taglist
+        mode: relation
+        span: auto
     snippet:
         label: 'xitara.snippetpool::lang.snippetpool.snipped'
         size: giant

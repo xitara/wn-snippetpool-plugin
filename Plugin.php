@@ -14,6 +14,22 @@ class Plugin extends PluginBase
      */
     public $require = ['Xitara.Core'];
 
+    /**
+     * Returns information about this plugin.
+     *
+     * @return array
+     */
+    public function pluginDetails()
+    {
+        return [
+            'name' => 'xitara.snippetpool::lang.plugin.name',
+            'description' => 'xitara.snippetpool::lang.plugin.description',
+            'author' => 'xitara.snippetpool::lang.plugin.author',
+            'homepage' => 'xitara.snippetpool::lang.plugin.homepage',
+            'icon' => 'icon-leaf',
+        ];
+    }
+
     public function register()
     {
         BackendMenu::registerContextSidenavPartial(
@@ -94,7 +110,6 @@ class Plugin extends PluginBase
             ->orderBy('name', 'ASC')
             ->get();
 
-        $inject = [];
         $inject = [
             'snippets.all' => [
                 'group' => 'xitara.snippetpool::lang.submenu.label',
@@ -111,6 +126,15 @@ class Plugin extends PluginBase
                 'icon' => 'icon-archive',
                 'permissions' => ['xitara.snippetpool.groups'],
                 'order' => 1301,
+            ],
+            'snippets.placeholder' => [
+                'group' => 'xitara.snippetpool::lang.submenu.label',
+                'label' => 'xitara.snippetpool::lang.snippetpool.groups',
+                // 'url' => Backend::url('xitara/snippetpool/group'),
+                // 'icon' => 'icon-archive',
+                // 'permissions' => ['xitara.snippetpool.groups'],
+                'order' => 1302,
+                'placeholder' => true,
             ],
         ];
 

@@ -48,6 +48,12 @@ class Snippets extends Model
             'key' => 'snippet_id',
             'otherKey' => 'group_id',
         ],
+        'tags' => [
+            'Xitara\SnippetPool\Models\Tag',
+            'table' => 'xitara_snippetpool_snippets_tags',
+            'key' => 'tag_id',
+            'otherKey' => 'snippet_id',
+        ],
     ];
     public $morphTo = [];
     public $morphOne = [];

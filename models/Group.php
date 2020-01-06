@@ -30,11 +30,7 @@ class Group extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [
-        // 'groups' => [
-        // 'Xitara\SnippetPool\Models\Group',
-        // ],
-    ];
+    public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

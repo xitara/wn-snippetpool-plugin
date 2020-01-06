@@ -12,19 +12,20 @@
     ],
 
     'snippetpool' => [
-        'snippetpool' => 'Snippet Pool',
         'name' => 'Name',
+        'snippetpool' => 'Snippet Pool',
         'snipped' => 'Snipped',
         'comment' => 'Kommentar',
         'id' => 'ID',
         'created_at' => 'angelegt',
-        'updated_at' => 'letzte Änderung',
+        'updated_at' => 'geändert',
         'snippets' => 'Snippets',
         'images' => 'Bilder',
         'trashed' => 'Papierkorb',
         'code' => 'Code',
         'description' => 'Beschreibung',
-        'groups' => 'Gruppen',
+        'groups' => 'Gruppenverwaltung',
+        'tags' => 'Tags',
         'all' => 'Alle Snippets',
     ],
 ];
