@@ -1,0 +1,20 @@
+// Variables
+@import "base/variables";
+
+// Mixins
+@import "base/mixins";
+
+/* Body */
+body {}
+
+/* Header */
+@import "partials/header";
+
+/* Button */
+@import "partials/button";
+
+/* Input */
+@import "partials/input";
+
+/* Footer */
+@import "partials/footer";

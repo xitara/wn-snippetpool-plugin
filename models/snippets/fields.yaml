@@ -1,0 +1,33 @@
+fields:
+    name:
+        label: 'xitara.snippetpool::lang.snippetpool.name'
+        span: auto
+        type: text
+    tags:
+        label: 'xitara.snippetpool::lang.snippetpool.tags'
+        span: auto
+        type: taglist
+        mode: relation
+        span: auto
+    snippet:
+        label: 'xitara.snippetpool::lang.snippetpool.snipped'
+        size: giant
+        span: auto
+        type: textarea
+    comment:
+        label: 'xitara.snippetpool::lang.snippetpool.comment'
+        span: auto
+        size: giant
+        type: richeditor
+    groups:
+        label: 'xitara.snippetpool::lang.snippetpool.groups'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    images:
+        label: 'xitara.snippetpool::lang.snippetpool.images'
+        span: auto
+        type: fileupload
+        mode: image
+        attachOnUpload: true
