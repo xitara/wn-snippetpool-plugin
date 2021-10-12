@@ -4,23 +4,21 @@ use App;
 use Backend;
 use BackendMenu;
 use System\Classes\PluginBase;
-use Xitara\Core\Plugin as Core;
+use Xitara\Nexus\Plugin as Nexus;
 use Xitara\SnippetPool\Models\Group;
 
-class Plugin extends PluginBase
-{
+class Plugin extends PluginBase {
     /**
      * @var array Plugin dependencies
      */
-    public $require = ['Xitara.Core'];
+    public $require = ['Xitara.Nexus'];
 
     /**
      * Returns information about this plugin.
      *
      * @return array
      */
-    public function pluginDetails()
-    {
+    public function pluginDetails() {
         return [
             'name' => 'xitara.snippetpool::lang.plugin.name',
             'description' => 'xitara.snippetpool::lang.plugin.description',
@@ -30,17 +28,15 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function register()
-    {
+    public function register() {
         BackendMenu::registerContextSidenavPartial(
             'Xitara.SnippetPool',
             'snippetpool',
-            '$/xitara/core/partials/_sidebar.htm'
+            '$/xitara/nexus/partials/_sidebar.htm'
         );
     }
 
-    public function boot()
-    {
+    public function boot() {
         /**
          * Check if we are currently in backend module.
          */
@@ -51,7 +47,7 @@ class Plugin extends PluginBase
         /**
          * add items to sidemenu
          */
-        Core::getSideMenu('Xitara.SnippetPool', 'snippetpool');
+        Nexus::getSideMenu('Xitara.SnippetPool', 'snippetpool');
     }
 
     /**
@@ -59,8 +55,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
-    {
+    public function registerNavigation() {
         return [
             'snippetpool' => [
                 'label' => 'xitara.snippetpool::lang.snippetpool.snippetpool',
@@ -77,8 +72,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerPermissions()
-    {
+    public function registerPermissions() {
         return [
             'xitara.snippetpool.snippets' => [
                 'tab' => 'SnippetPool',
@@ -104,48 +98,56 @@ class Plugin extends PluginBase
      * @since   0.0.1
      * @return  array                   sidemenu-data
      */
-    public static function injectSideMenu()
-    {
+    public static function injectSideMenu() {
         $groups = Group::select('id', 'name')
             ->orderBy('name', 'ASC')
             ->get();
 
+        $i = 0;
         $inject = [
-            'snippets.all' => [
-                'group' => 'xitara.snippetpool::lang.submenu.label',
-                'label' => 'xitara.snippetpool::lang.snippetpool.all',
-                'url' => Backend::url('xitara/snippetpool/snippets'),
-                'icon' => 'icon-archive',
-                'permissions' => ['xitara.snippetpool.snippets'],
-                'order' => 1300,
-            ],
             'snippets.groups' => [
-                'group' => 'xitara.snippetpool::lang.submenu.label',
                 'label' => 'xitara.snippetpool::lang.snippetpool.groups',
                 'url' => Backend::url('xitara/snippetpool/group'),
                 'icon' => 'icon-archive',
                 'permissions' => ['xitara.snippetpool.groups'],
-                'order' => 1301,
+                'attributes' => [
+                    'group' => 'xitara.snippetpool::lang.submenu.label',
+                    'line' => 'bottom',
+                ],
+                'order' => \Xitara\Nexus\Plugin::getMenuOrder('xitara.snippetpool') + $i++,
             ],
-            'snippets.placeholder' => [
-                'group' => 'xitara.snippetpool::lang.submenu.label',
-                'label' => 'xitara.snippetpool::lang.snippetpool.groups',
-                // 'url' => Backend::url('xitara/snippetpool/group'),
-                // 'icon' => 'icon-archive',
-                // 'permissions' => ['xitara.snippetpool.groups'],
-                'order' => 1302,
-                'placeholder' => true,
+            'snippets.all' => [
+                'label' => 'xitara.snippetpool::lang.snippetpool.all',
+                'url' => Backend::url('xitara/snippetpool/snippets'),
+                'icon' => 'icon-archive',
+                'permissions' => ['xitara.snippetpool.snippets'],
+                'attributes' => [
+                    'group' => 'xitara.snippetpool::lang.submenu.label',
+                ],
+                'order' => \Xitara\Nexus\Plugin::getMenuOrder('xitara.snippetpool') + $i++,
             ],
+            // 'snippets.placeholder' => [
+            //     'group' => 'xitara.snippetpool::lang.submenu.label',
+            //     'label' => 'xitara.snippetpool::lang.snippetpool.groups',
+            //     // 'url' => Backend::url('xitara/snippetpool/group'),
+            //     // 'icon' => 'icon-archive',
+            //     // 'permissions' => ['xitara.snippetpool.groups'],
+            //     'order' => 1302,
+            //     'placeholder' => true,
+            // ],
         ];
 
         foreach ($groups as $group) {
             $inject['snippets.' . $group->id] = [
-                'group' => 'xitara.snippetpool::lang.submenu.label',
                 'label' => $group->name,
                 'url' => Backend::url('xitara/snippetpool/snippets/index/' . $group->id),
                 'icon' => 'icon-archive',
                 'permissions' => ['xitara.snippetpool.groups'],
-                'order' => 1310,
+                'attributes' => [
+                    'group' => 'xitara.snippetpool::lang.submenu.label',
+                    'level' => 2,
+                ],
+                'order' => \Xitara\Nexus\Plugin::getMenuOrder('xitara.snippetpool') + $i++,
             ];
         }
 
