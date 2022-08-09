@@ -5,7 +5,6 @@ fields:
         type: text
     tags:
         label: 'xitara.snippetpool::lang.snippetpool.tags'
-        span: auto
         type: taglist
         mode: relation
         span: auto

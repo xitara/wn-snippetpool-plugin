@@ -112,7 +112,6 @@ class Plugin extends PluginBase {
                 'permissions' => ['xitara.snippetpool.groups'],
                 'attributes' => [
                     'group' => 'xitara.snippetpool::lang.submenu.label',
-                    'line' => 'bottom',
                 ],
                 'order' => \Xitara\Nexus\Plugin::getMenuOrder('xitara.snippetpool') + $i++,
             ],
@@ -123,6 +122,7 @@ class Plugin extends PluginBase {
                 'permissions' => ['xitara.snippetpool.snippets'],
                 'attributes' => [
                     'group' => 'xitara.snippetpool::lang.submenu.label',
+                    'line' => 'bottom',
                 ],
                 'order' => \Xitara\Nexus\Plugin::getMenuOrder('xitara.snippetpool') + $i++,
             ],
