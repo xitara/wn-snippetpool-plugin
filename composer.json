@@ -1,0 +1,28 @@
+{
+    "name": "xitara/wn-snippetpool-plugin",
+    "type": "winter-plugin",
+    "description": "Pool for Code-/Textsnippets for Winter CMS",
+    "keywords": [
+        "winter",
+        "cms",
+        "snippetpool",
+        "plugin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Manuel Burghammer",
+            "email": "mb@xitara.com",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "composer/installers": "~1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
